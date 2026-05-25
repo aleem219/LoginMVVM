@@ -26,60 +26,84 @@
             <rect key="frame" x="0.0" y="0.0" width="460" height="47"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unR-Ml-tWu">
-                    <rect key="frame" x="0.0" y="1" width="45" height="45"/>
-                    <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_backBtn"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYQ-CL-Yc0">
+                    <rect key="frame" x="0.0" y="0.0" width="460" height="47"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unR-Ml-tWu">
+                            <rect key="frame" x="0.0" y="1" width="45" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_backBtn"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="TIP-lT-JvV"/>
+                                <constraint firstAttribute="width" constant="45" id="vxk-9i-Y1x"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="arrow.left.circle.fill" catalog="system"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="NZD-iV-ogz"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Navigation Bar Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shB-5G-YQw">
+                            <rect key="frame" x="125" y="9.5" width="210" height="28"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_titleLbl"/>
+                            <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                            <color key="textColor" red="0.16862745100000001" green="0.2274509804" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-fL-7aq">
+                            <rect key="frame" x="415" y="1" width="45" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_checkmarkBtn"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="9cN-TY-oEG"/>
+                                <constraint firstAttribute="height" constant="45" id="eK9-qW-x8G"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="gear" catalog="system"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pZ-C9-GhD">
+                            <rect key="frame" x="366" y="1" width="45" height="45"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="biv-bd-W4s"/>
+                                <constraint firstAttribute="width" constant="45" id="ss0-Rc-pAg"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="person.circle.fill" catalog="system"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIW-3h-I8V">
+                            <rect key="frame" x="0.0" y="46" width="460" height="1"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Whg-js-KYd"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="85k-1o-h0l"/>
-                        <constraint firstAttribute="width" constant="45" id="yiR-BW-olQ"/>
+                        <constraint firstItem="QFB-fL-7aq" firstAttribute="centerY" secondItem="YYQ-CL-Yc0" secondAttribute="centerY" id="0rv-sk-Z2D"/>
+                        <constraint firstAttribute="trailing" secondItem="QFB-fL-7aq" secondAttribute="trailing" id="4f8-RR-ms1"/>
+                        <constraint firstItem="unR-Ml-tWu" firstAttribute="centerY" secondItem="YYQ-CL-Yc0" secondAttribute="centerY" id="6WZ-EC-nLj"/>
+                        <constraint firstItem="shB-5G-YQw" firstAttribute="centerY" secondItem="YYQ-CL-Yc0" secondAttribute="centerY" id="80i-hw-udl"/>
+                        <constraint firstItem="shB-5G-YQw" firstAttribute="centerX" secondItem="YYQ-CL-Yc0" secondAttribute="centerX" id="BDI-cq-Fy3"/>
+                        <constraint firstAttribute="trailing" secondItem="VIW-3h-I8V" secondAttribute="trailing" id="En8-HN-oTR"/>
+                        <constraint firstItem="VIW-3h-I8V" firstAttribute="leading" secondItem="YYQ-CL-Yc0" secondAttribute="leading" id="EtI-5T-23G"/>
+                        <constraint firstItem="1pZ-C9-GhD" firstAttribute="centerY" secondItem="QFB-fL-7aq" secondAttribute="centerY" id="Iyg-VZ-W9j"/>
+                        <constraint firstItem="unR-Ml-tWu" firstAttribute="leading" secondItem="YYQ-CL-Yc0" secondAttribute="leading" id="Lro-4p-W58"/>
+                        <constraint firstItem="QFB-fL-7aq" firstAttribute="leading" secondItem="1pZ-C9-GhD" secondAttribute="trailing" constant="4" id="grO-3y-kDf"/>
+                        <constraint firstAttribute="bottom" secondItem="VIW-3h-I8V" secondAttribute="bottom" id="mMu-x4-fW3"/>
+                        <constraint firstAttribute="height" constant="47" id="zrK-w2-GmG"/>
                     </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="arrow.left.circle.fill" catalog="system"/>
-                    <connections>
-                        <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="NZD-iV-ogz"/>
-                    </connections>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Navigation Bar Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shB-5G-YQw">
-                    <rect key="frame" x="125" y="9.5" width="210" height="28"/>
-                    <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_titleLbl"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="nTX-6X-XgV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
-                    <color key="textColor" red="0.16862745100000001" green="0.2274509804" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFB-fL-7aq">
-                    <rect key="frame" x="415" y="1" width="45" height="45"/>
-                    <accessibility key="accessibilityConfiguration" identifier="topBarNavigation_checkmarkBtn"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="T8T-SK-4vC"/>
-                        <constraint firstAttribute="width" constant="45" id="lg6-Zg-TCm"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="gear" catalog="system"/>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pZ-C9-GhD">
-                    <rect key="frame" x="368" y="1" width="45" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="4oj-V1-2LL"/>
-                        <constraint firstAttribute="width" constant="45" id="Nrl-rw-4A3"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="person.circle.fill" catalog="system"/>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="wpF-P1-aoN"/>
-            <color key="backgroundColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="shB-5G-YQw" firstAttribute="centerX" secondItem="AB3-JX-r91" secondAttribute="centerX" id="5dW-aq-cAn"/>
-                <constraint firstItem="QFB-fL-7aq" firstAttribute="centerY" secondItem="shB-5G-YQw" secondAttribute="centerY" id="BZ3-ti-oY2"/>
-                <constraint firstItem="QFB-fL-7aq" firstAttribute="trailing" secondItem="wpF-P1-aoN" secondAttribute="trailing" id="GFj-bf-DNv"/>
-                <constraint firstItem="QFB-fL-7aq" firstAttribute="leading" secondItem="1pZ-C9-GhD" secondAttribute="trailing" constant="2" id="GlO-CF-tDz"/>
-                <constraint firstItem="unR-Ml-tWu" firstAttribute="centerY" secondItem="AB3-JX-r91" secondAttribute="centerY" id="Nxq-9I-SoV"/>
-                <constraint firstItem="1pZ-C9-GhD" firstAttribute="centerY" secondItem="shB-5G-YQw" secondAttribute="centerY" id="TAO-Fg-9U2"/>
-                <constraint firstItem="unR-Ml-tWu" firstAttribute="leading" secondItem="wpF-P1-aoN" secondAttribute="leading" id="XBu-mZ-wLC"/>
-                <constraint firstItem="shB-5G-YQw" firstAttribute="centerY" secondItem="AB3-JX-r91" secondAttribute="centerY" id="ril-UJ-wyx"/>
+                <constraint firstItem="YYQ-CL-Yc0" firstAttribute="leading" secondItem="wpF-P1-aoN" secondAttribute="leading" id="3h4-vO-deM"/>
+                <constraint firstItem="YYQ-CL-Yc0" firstAttribute="trailing" secondItem="wpF-P1-aoN" secondAttribute="trailing" id="NmY-8M-Lny"/>
+                <constraint firstItem="YYQ-CL-Yc0" firstAttribute="centerY" secondItem="AB3-JX-r91" secondAttribute="centerY" id="dfF-z3-gtB"/>
+                <constraint firstItem="YYQ-CL-Yc0" firstAttribute="centerX" secondItem="AB3-JX-r91" secondAttribute="centerX" id="igs-86-Fla"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
