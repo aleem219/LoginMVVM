@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="KGk-i7-Jjw" customClass="UserCell" customModule="LoginMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSR-XG-3zl">
+                        <rect key="frame" x="10" y="5" width="373" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-O1-5SR">
+                                <rect key="frame" x="5.3333333333333321" y="13.333333333333336" width="57.666666666666671" height="55.000000000000007"/>
+                                <color key="tintColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="jIC-h2-c7j"/>
+                                    <constraint firstAttribute="width" constant="55" id="yve-o4-rml"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-0q-uVi">
+                                <rect key="frame" x="73" y="7.6666666666666661" width="290" height="18.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="We6-WY-ySs">
+                                <rect key="frame" x="73" y="32.333333333333336" width="290" height="16.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Phone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1C-5N-of8">
+                                <rect key="frame" x="73" y="55.333333333333336" width="290" height="14.000000000000007"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Oblique" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="0.50395798841059603" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="p1C-5N-of8" firstAttribute="top" secondItem="We6-WY-ySs" secondAttribute="bottom" constant="6.6699999999999999" id="2L5-RK-J4w"/>
+                            <constraint firstItem="tOF-O1-5SR" firstAttribute="centerY" secondItem="oSR-XG-3zl" secondAttribute="centerY" id="4Em-We-ZpP"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="p1C-5N-of8" secondAttribute="bottom" constant="8.3300000000000001" id="Dle-w2-AE1"/>
+                            <constraint firstItem="We6-WY-ySs" firstAttribute="top" secondItem="hAm-0q-uVi" secondAttribute="bottom" constant="6" id="IWZ-1t-dCp"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="KX8-A3-slJ"/>
+                            <constraint firstItem="hAm-0q-uVi" firstAttribute="leading" secondItem="tOF-O1-5SR" secondAttribute="trailing" constant="10" id="NAn-Qa-yfl"/>
+                            <constraint firstItem="p1C-5N-of8" firstAttribute="trailing" secondItem="We6-WY-ySs" secondAttribute="trailing" id="VuH-C1-Aa5"/>
+                            <constraint firstItem="hAm-0q-uVi" firstAttribute="top" secondItem="oSR-XG-3zl" secondAttribute="top" constant="7.6699999999999999" id="YVQ-Ua-TTP"/>
+                            <constraint firstItem="We6-WY-ySs" firstAttribute="trailing" secondItem="hAm-0q-uVi" secondAttribute="trailing" id="ZK6-S4-hdT"/>
+                            <constraint firstAttribute="trailing" secondItem="hAm-0q-uVi" secondAttribute="trailing" constant="10" id="ddz-z1-CHY"/>
+                            <constraint firstItem="We6-WY-ySs" firstAttribute="leading" secondItem="hAm-0q-uVi" secondAttribute="leading" id="hev-iU-zAr"/>
+                            <constraint firstItem="tOF-O1-5SR" firstAttribute="leading" secondItem="oSR-XG-3zl" secondAttribute="leading" constant="8" id="i8Z-a6-22A"/>
+                            <constraint firstItem="p1C-5N-of8" firstAttribute="leading" secondItem="We6-WY-ySs" secondAttribute="leading" id="wU0-XA-9tj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oSR-XG-3zl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="8bv-0R-NTq"/>
+                    <constraint firstAttribute="trailing" secondItem="oSR-XG-3zl" secondAttribute="trailing" constant="10" id="JLO-7m-CeQ"/>
+                    <constraint firstAttribute="bottom" secondItem="oSR-XG-3zl" secondAttribute="bottom" constant="5" id="Mxw-0B-cpE"/>
+                    <constraint firstItem="oSR-XG-3zl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lU0-pc-Thx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgUser" destination="tOF-O1-5SR" id="6PM-69-Np4"/>
+                <outlet property="lblUserEmail" destination="We6-WY-ySs" id="Fzg-vG-bnK"/>
+                <outlet property="lblUserName" destination="hAm-0q-uVi" id="qMd-8H-rzT"/>
+                <outlet property="lblUserPhone" destination="p1C-5N-of8" id="3x5-7Y-VWZ"/>
+                <outlet property="mainView" destination="oSR-XG-3zl" id="JOy-B1-iaD"/>
+            </connections>
+            <point key="canvasLocation" x="22.137404580152669" y="-23.239436619718312"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="114"/>
+    </resources>
+</document>

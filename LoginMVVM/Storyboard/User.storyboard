@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UserVC-->
+        <scene sceneID="4MZ-Dq-fjt">
+            <objects>
+                <viewController storyboardIdentifier="UserVC" id="hBq-XT-IUe" customClass="UserVC" customModule="LoginMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tQO-ro-tKC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHR-zo-uWf" customClass="NavigationBar" customModule="LoginMVVM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="118" width="393" height="60"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="qWo-oV-1dz"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5re-1S-NzV">
+                                <rect key="frame" x="0.0" y="178" width="393" height="606"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.85490196080000003" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hBq-XT-IUe" id="mYs-P5-b4Z"/>
+                                    <outlet property="delegate" destination="hBq-XT-IUe" id="3Mf-Ed-sCy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pzn-Kw-4aU"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5re-1S-NzV" firstAttribute="top" secondItem="zHR-zo-uWf" secondAttribute="bottom" id="F5Z-am-Evh"/>
+                            <constraint firstItem="pzn-Kw-4aU" firstAttribute="trailing" secondItem="5re-1S-NzV" secondAttribute="trailing" id="IiM-Ni-SMs"/>
+                            <constraint firstItem="pzn-Kw-4aU" firstAttribute="bottom" secondItem="5re-1S-NzV" secondAttribute="bottom" id="X5k-ck-5qo"/>
+                            <constraint firstItem="pzn-Kw-4aU" firstAttribute="trailing" secondItem="zHR-zo-uWf" secondAttribute="trailing" id="hsT-7c-oZV"/>
+                            <constraint firstItem="5re-1S-NzV" firstAttribute="leading" secondItem="pzn-Kw-4aU" secondAttribute="leading" id="kkP-cd-aRg"/>
+                            <constraint firstItem="zHR-zo-uWf" firstAttribute="leading" secondItem="pzn-Kw-4aU" secondAttribute="leading" id="xHG-jg-ToT"/>
+                            <constraint firstItem="zHR-zo-uWf" firstAttribute="top" secondItem="pzn-Kw-4aU" secondAttribute="top" id="y7o-2w-uZy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="zHR-zo-uWf" id="20Y-JU-gVM"/>
+                        <outlet property="tableView" destination="5re-1S-NzV" id="C1j-0c-ceM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgp-sj-fUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-75"/>
+        </scene>
+    </scenes>
+</document>
