@@ -101,6 +101,10 @@ extension UIViewController {
         ProgressDialog.dismiss()
     }
     
+    func popUp() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     static func getTopViewController(base: UIViewController? = UIApplication.shared.connectedScenes
         .compactMap { $0 as? UIWindowScene }
         .first?.windows

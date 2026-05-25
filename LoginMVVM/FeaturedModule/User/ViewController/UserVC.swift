@@ -26,9 +26,6 @@ class UserVC: UIViewController {
         navBar.isLeftButtonHidden = false
         navBar.isRightButtonHidden = true
         navBar.isRightSecondButtonHidden = true
-        navBar.onLeftButtonTapped = { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
-        }
     }
     
     private func setupTableView() {

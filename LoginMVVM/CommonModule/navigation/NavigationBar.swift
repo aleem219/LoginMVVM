@@ -10,7 +10,6 @@ final class NavigationBar: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var rightFirstButton: UIButton!
     @IBOutlet private weak var rightSecondButton: UIButton!
-    var onLeftButtonTapped: (() -> Void)?
     
     var title: String = "" {
         didSet {
@@ -66,7 +65,18 @@ final class NavigationBar: UIView {
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
-        onLeftButtonTapped?()
+        var responder: UIResponder? = self
+          while let next = responder?.next {
+              responder = next
+              if let viewController = responder as? UIViewController {
+                  if viewController.navigationController != nil {
+                      viewController.popUp()
+                  } else {
+                      viewController.dismiss(animated: true)
+                  }
+                  break
+              }
+          }
     }
     
     private func setupLayout() {
