@@ -55,6 +55,10 @@ public enum StringConstants {
     public enum StoryBoard {
         static let userVC = "UserVC"
     }
+    
+    public enum Cells {
+        static let UserCell = "UserCell"
+    }
 }
 
 public enum ServiceOutcome<T> {

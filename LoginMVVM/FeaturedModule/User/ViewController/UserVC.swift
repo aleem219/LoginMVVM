@@ -29,7 +29,7 @@ class UserVC: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
+        tableView.register(UINib(nibName: StringConstants.Cells.UserCell, bundle: nil), forCellReuseIdentifier: StringConstants.Cells.UserCell)
     }
     
     private func setupViewModel() {
@@ -43,7 +43,7 @@ extension UserVC : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! UserCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: StringConstants.Cells.UserCell) as! UserCell
         cell.selectionStyle = .none
         cell.configure(with: viewModel.allUsers[indexPath.row])
         return cell
