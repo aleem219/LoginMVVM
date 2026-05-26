@@ -51,6 +51,10 @@ public enum StringConstants {
         static let maxUploadSize = "Maximum upload file size: 10MB"
         static let networkAvailablity = "Please check your internet connection and try again."
     }
+    
+    public enum StoryBoard {
+        static let userVC = "UserVC"
+    }
 }
 
 public enum ServiceOutcome<T> {
