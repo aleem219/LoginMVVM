@@ -22,10 +22,10 @@ class UserVC: UIViewController {
     
     // MARK: - Setup
     private func setupNavBar() {
-        navBar.title = "User List"
-        navBar.isLeftButtonHidden = false
-        navBar.isRightButtonHidden = true
-        navBar.isRightSecondButtonHidden = true
+        NavigationBarConfigurator.configure(
+            navBar,
+            title: "User List"
+        )
     }
     
     private func setupTableView() {
