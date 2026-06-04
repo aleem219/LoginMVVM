@@ -95,6 +95,3 @@ extension LoginVC: ImagePickerDelegate {
         }
     }
 }
-
-// just checking for one file code from xcode
-
