@@ -57,7 +57,8 @@ class UserViewModel {
                     self.totalUsers = data.total ?? 0
                     self.currentSkip += newUsers.count
                     self.allUsers.append(contentsOf: newUsers)
-                    
+                    let token: String? = MyUserDefaults.instance.get(key: .access_token)
+                    print("Access token is: \(token ?? "")")
                     print("Fetched \(newUsers.count) users | Total loaded: \(self.allUsers.count)/\(self.totalUsers)")
                     self.delegate?.didFetchUsers(self.allUsers)
                     
