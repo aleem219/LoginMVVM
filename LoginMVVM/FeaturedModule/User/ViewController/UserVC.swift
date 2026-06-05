@@ -50,20 +50,26 @@ extension UserVC : UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.allUsers.count - 1 {
-            viewModel.fetchNextPageIfNeeded()
-        }
+        let lastIndex = viewModel.allUsers.count - 1
+        guard indexPath.row == lastIndex, viewModel.hasMoreUsers else { return }
+        viewModel.fetchNextPageIfNeeded()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let userDetail = AppStoryboard.userStoryboard.instantiateViewController(identifier: StringConstants.StoryBoard.userDetailsVC) as! UserDetailsVC
+//        self.navigationController?.setViewControllers([userDetail], animated: true)
+//    }
 }
 
 extension UserVC: UserViewModelProtocol {
-    
-    func didFetchUsers(_ users: [User]) {
-        tableView.reloadData()
+    func didFetchUsers(_ indexPaths: [IndexPath]) {
+        UIView.performWithoutAnimation {
+            tableView.insertRows(at: indexPaths, with: .none)
+        }
     }
     
     func userFailure(message: String) {

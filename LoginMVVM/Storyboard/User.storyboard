@@ -53,5 +53,37 @@
             </objects>
             <point key="canvasLocation" x="1628" y="-75"/>
         </scene>
+        <!--User DetailsVC-->
+        <scene sceneID="mYQ-sT-dnI">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsVC" id="8d4-Sb-d2y" customClass="UserDetailsVC" customModule="LoginMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="utN-fX-7VM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSB-Q0-29W" customClass="NavigationBar" customModule="LoginMVVM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="60" width="393" height="60"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0l1-Yh-VvU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fsH-n1-2tt"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.90980392160000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lSB-Q0-29W" firstAttribute="top" secondItem="utN-fX-7VM" secondAttribute="top" constant="60" id="5G6-zj-xMF"/>
+                            <constraint firstItem="fsH-n1-2tt" firstAttribute="trailing" secondItem="lSB-Q0-29W" secondAttribute="trailing" id="ciL-hg-e8N"/>
+                            <constraint firstItem="lSB-Q0-29W" firstAttribute="leading" secondItem="fsH-n1-2tt" secondAttribute="leading" id="xCz-2f-Jdu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="lSB-Q0-29W" id="3sc-C2-Hnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WC-hV-rUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="-75"/>
+        </scene>
     </scenes>
 </document>

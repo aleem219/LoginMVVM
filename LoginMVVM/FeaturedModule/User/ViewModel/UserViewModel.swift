@@ -10,7 +10,7 @@ import Foundation
 
 protocol UserViewModelProtocol: AnyObject{
     func userFailure(message: String)
-    func didFetchUsers(_ users: [User])
+    func didFetchUsers(_ indexPaths: [IndexPath])
 }
 
 class UserViewModel {
@@ -55,15 +55,16 @@ class UserViewModel {
                 case .success(let data):
                     let newUsers = data.users ?? []
                     self.totalUsers = data.total ?? 0
-                    self.currentSkip += newUsers.count
+                    
+                    let startIndex = self.allUsers.count
                     self.allUsers.append(contentsOf: newUsers)
-                    let token: String? = MyUserDefaults.instance.get(key: .access_token)
-                    print("Access token is: \(token ?? "")")
-                    print("Fetched \(newUsers.count) users | Total loaded: \(self.allUsers.count)/\(self.totalUsers)")
-                    self.delegate?.didFetchUsers(self.allUsers)
+                    self.currentSkip += newUsers.count
+                    let newIndexPaths = (startIndex..<self.allUsers.count).map {
+                        IndexPath(row: $0, section: 0)
+                    }
+                    self.delegate?.didFetchUsers(newIndexPaths)
                     
                 case .failure(let error):
-                    print("Fetch Users API error: \(error.message ?? "Unknown error")")
                     self.delegate?.userFailure(message: error.message ?? "Unknown error")
                 }
             }
