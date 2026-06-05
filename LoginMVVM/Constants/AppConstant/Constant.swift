@@ -54,6 +54,7 @@ public enum StringConstants {
     
     public enum StoryBoard {
         static let userVC = "UserVC"
+        static let loginVC = "LoginVC"
     }
     
     public enum Cells {

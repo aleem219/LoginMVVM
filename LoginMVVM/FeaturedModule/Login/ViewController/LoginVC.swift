@@ -69,7 +69,7 @@ extension LoginVC: LoginViewModelProtocol {
     func loginSuccessful(message: String) {
         showAlert(message: message) {
             let vc = AppStoryboard.userStoryboard.instantiateViewController(identifier: StringConstants.StoryBoard.userVC) as! UserVC
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.setViewControllers([vc], animated: true) // ✅ replaces stack, no back button
         }
     }
     

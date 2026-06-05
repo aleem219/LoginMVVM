@@ -30,6 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    // MARK: - Root ViewController
+      static func setUserVCAsRoot() {
+          let userVC = AppStoryboard.mainStoryboard.instantiateViewController(identifier: StringConstants.StoryBoard.loginVC) as! LoginVC
+          let nav = UINavigationController(rootViewController: userVC)
+          
+          if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+             let window = scene.windows.first {
+              window.rootViewController = nav
+              window.makeKeyAndVisible()
+              UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil)
+          }
+      }
 
 
 }

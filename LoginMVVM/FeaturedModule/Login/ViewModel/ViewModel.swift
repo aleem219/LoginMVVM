@@ -28,7 +28,12 @@ class LoginViewModel {
                 if let message = data.message, message == "Invalid credentials" {
                     self.delegate?.loginFailure(message: message)
                 } else {
-                    self.delegate?.loginSuccessful(message: "Login successful.")
+                    if let userID = data.id {
+                        MyUserDefaults.instance.set(value: userID, key: MyUserDefaults.Key.id) // ✅ userID is Int, saves as Int
+                        self.delegate?.loginSuccessful(message: "Login successful.")
+                    } else {
+                        self.delegate?.loginFailure(message: "User ID not found.")
+                    }
                 }
             case .failure(let error):
                 print("Login API error: \(error.message ?? "Unknown error")")
