@@ -78,8 +78,8 @@ final class NavigationBar: UIView {
               responder = next
               if let viewController = responder as? UIViewController {
                   if viewController.navigationController != nil {
-//                      viewController.popUp()
-                      AppDelegate.setUserVCAsRoot()
+                      viewController.popUp()
+//                      AppDelegate.setUserVCAsRoot()
                   } else {
                       viewController.dismiss(animated: true)
                   }
