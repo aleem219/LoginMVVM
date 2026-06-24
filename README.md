@@ -9,10 +9,15 @@ LoginMVVM demonstrates a clean separation of concerns using the MVVM (Model-View
 ## Features
 
 🔐 Authentication — Login flow backed by REST API calls (GET/POST)
+
 🧩 MVVM Architecture — Clear separation between View, ViewModel, and Model layers
+
 🎨 Reusable Components — Custom DesignableButton, DesignableView, and reusable AlertView popup
+
 📸 Image Picker — Upload and preview profile images with size validation
+
 🌐 Networking Layer — Centralized API/service handling via ServiceController
+
 🧱 Extensions — Common UIButton, UITextField, UIView, and UIViewController extensions for shared functionality
 
 
