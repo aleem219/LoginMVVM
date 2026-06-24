@@ -35,12 +35,10 @@ class AlertView: UIView {
     }
     
     // -  Configure text dynamically
-      func configure(heading: String, subHeading: String) {
-          lblHeading.text = heading
-          lblSubHeading.text = subHeading
-      }
-    
-    
+    func configure(heading: String, subHeading: String) {
+        lblHeading.text = heading
+        lblSubHeading.text = subHeading
+    }
     
     @IBAction func btnLogoutAction(_ sender: DesignableButton) {
         onLogoutTapped?()
@@ -51,4 +49,22 @@ class AlertView: UIView {
         onCancelTapped?()
     }
     
+    @discardableResult
+    static func show(
+        in view: UIView,
+        heading: String,
+        subHeading: String,
+        onLogout: (() -> Void)? = nil,
+        onCancel: (() -> Void)? = nil
+    ) -> AlertView? {
+        guard let alert = Bundle.main.loadNibNamed("AlertView", owner: nil, options: nil)?.first as? AlertView else {
+            return nil
+        }
+        alert.frame = view.bounds
+        alert.configure(heading: heading, subHeading: subHeading)
+        alert.onLogoutTapped = onLogout
+        alert.onCancelTapped = onCancel
+        view.addSubview(alert)
+        return alert
+    }
 }
