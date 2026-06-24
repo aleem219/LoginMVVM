@@ -78,4 +78,5 @@ ProgressHUD — for loading indicators
 
 ## Screenshot
 
-<img width="1170" height="2532" alt="Simulator Screenshot - iPhone 16e - 2026-06-24 at 19 52 43" src="https://github.com/user-attachments/assets/9b0d15cf-a700-48ed-863f-d7bede054b52" />
+<img width="1170" height="2532" alt="Simulator Screenshot - iPhone 16e - 2026-06-24 at 19 52 43" src="https://github.com/user-attachments/assets/2abfea68-d49e-4b84-8ad9-39d06feca127" />
+
