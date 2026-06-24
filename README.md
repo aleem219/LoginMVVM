@@ -26,9 +26,10 @@ LoginMVVM demonstrates a clean separation of concerns using the MVVM (Model-View
 For testing purposes, use the following sample login credentials:
 
 Username: emilys
+
 Password: emilyspass
 
-Project Structure
+## Project Structure
 
 LoginMVVM/
 ├── CommonModule/
@@ -51,9 +52,10 @@ LoginMVVM/
 
 ## Requirements
 
-
 Xcode 15+
+
 iOS 16+
+
 Swift 5+
 
 
@@ -65,6 +67,7 @@ bash   git clone https://github.com/aleem219/LoginMVVM.git
 
 
 Open LoginMVVM.xcodeproj in Xcode
+
 Build and run on a simulator or device
 
 
