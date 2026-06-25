@@ -15,19 +15,19 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="THu-fc-A5B">
-                    <rect key="frame" x="70" y="250.33333333333334" width="253" height="351.33333333333326"/>
+                    <rect key="frame" x="50" y="250.33333333333334" width="293" height="351.33333333333326"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAe-04-wnz" customClass="DesignableView" customModule="LoginMVVM" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="253" height="351.33333333333331"/>
+                            <rect key="frame" x="0.0" y="0.0" width="293" height="351.33333333333331"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you to logout?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-Zs-tt6">
-                                    <rect key="frame" x="20" y="9.9999999999999716" width="213" height="56"/>
+                                    <rect key="frame" x="20" y="9.9999999999999716" width="253" height="56"/>
                                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="21"/>
                                     <color key="textColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" sizingRule="oversize" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35s-hg-pKW">
-                                    <rect key="frame" x="20" y="77.999999999999957" width="213" height="131.33333333333337"/>
+                                    <rect key="frame" x="20" y="77.999999999999957" width="253" height="131.33333333333337"/>
                                     <string key="text">You saved your credentials, so logging back in will be easy. 
 You can change that setting from the login screen.</string>
                                     <fontDescription key="fontDescription" name="Verdana-Italic" family="Verdana" pointSize="18"/>
@@ -35,7 +35,7 @@ You can change that setting from the login screen.</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-qE-wwe" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="224.33333333333334" width="183" height="45.000000000000028"/>
+                                    <rect key="frame" x="35" y="224.33333333333334" width="223" height="45.000000000000028"/>
                                     <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="sn4-z0-a3G"/>
@@ -65,7 +65,7 @@ You can change that setting from the login screen.</string>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXl-ge-rl0" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
-                                    <rect key="frame" x="35" y="286.33333333333326" width="183" height="45"/>
+                                    <rect key="frame" x="35" y="286.33333333333326" width="223" height="45"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="wAF-WC-qcL"/>
@@ -109,8 +109,8 @@ You can change that setting from the login screen.</string>
                                 <constraint firstAttribute="trailing" secondItem="cjC-Zs-tt6" secondAttribute="trailing" constant="20" id="bVf-gj-dhP"/>
                                 <constraint firstItem="JdY-qE-wwe" firstAttribute="top" secondItem="35s-hg-pKW" secondAttribute="bottom" constant="15" id="ipm-Qs-7LN"/>
                                 <constraint firstItem="cjC-Zs-tt6" firstAttribute="top" secondItem="KAe-04-wnz" secondAttribute="top" constant="10" id="r5M-6I-TUt"/>
-                                <constraint firstAttribute="width" constant="253" id="spT-ww-U9B"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="tAX-5g-rG6"/>
+                                <constraint firstAttribute="width" constant="293" id="spT-ww-U9B"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="tAX-5g-rG6"/>
                                 <constraint firstItem="35s-hg-pKW" firstAttribute="leading" secondItem="cjC-Zs-tt6" secondAttribute="leading" id="vLa-uz-w1c"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
