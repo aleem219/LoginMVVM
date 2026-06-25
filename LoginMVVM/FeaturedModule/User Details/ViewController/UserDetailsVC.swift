@@ -32,7 +32,7 @@ class UserDetailsVC: UIViewController {
  AlertView.show(
      in: self.view,
      heading: "Are you sure you want to login?",
-     subHeading: "You'll need to enter your credentials again next time.",
+     subHeading: "You saved your credentials, so logging back in will be easy. You can change that setting from the login screen.",
      onLogout: {
          print("Logout from LoginVC")
      },
