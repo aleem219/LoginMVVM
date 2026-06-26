@@ -10,6 +10,8 @@ import UIKit
 class AlertView: UIView {
     
     
+    @IBOutlet weak var btnCancel: DesignableButton!
+    @IBOutlet weak var btnLogout: DesignableButton!
     @IBOutlet weak var lblHeading: UILabel!
     @IBOutlet weak var lblSubHeading: UILabel!
     
@@ -54,6 +56,10 @@ class AlertView: UIView {
         in view: UIView,
         heading: String,
         subHeading: String,
+        showCancel: Bool = true,
+        showLogout: Bool = true,
+        cancelTitle: String? = nil,
+        logoutTitle: String? = nil,
         onLogout: (() -> Void)? = nil,
         onCancel: (() -> Void)? = nil
     ) -> AlertView? {
@@ -62,6 +68,17 @@ class AlertView: UIView {
         }
         alert.frame = view.bounds
         alert.configure(heading: heading, subHeading: subHeading)
+        
+        alert.btnCancel.isHidden = !showCancel
+        alert.btnLogout.isHidden = !showLogout
+        
+        if let cancelTitle = cancelTitle {
+            alert.btnCancel.setTitle(cancelTitle, for: .normal)
+        }
+        if let logoutTitle = logoutTitle {
+            alert.btnLogout.setTitle(logoutTitle, for: .normal)
+        }
+        
         alert.onLogoutTapped = onLogout
         alert.onCancelTapped = onCancel
         view.addSubview(alert)

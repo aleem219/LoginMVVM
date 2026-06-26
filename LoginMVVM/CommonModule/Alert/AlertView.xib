@@ -34,83 +34,85 @@ You can change that setting from the login screen.</string>
                                     <color key="textColor" white="0.0" alpha="0.4993791390728477" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-qE-wwe" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
-                                    <rect key="frame" x="55" y="232.33333333333334" width="183" height="45.000000000000028"/>
-                                    <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="sn4-z0-a3G"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="L O G O U T">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="normalTitleColor">
-                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="btnLogoutAction:" destination="tPM-Fu-xPG" eventType="touchUpInside" id="Zal-QE-hRm"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXl-ge-rl0" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
-                                    <rect key="frame" x="55" y="294.33333333333326" width="183" height="45"/>
-                                    <color key="backgroundColor" red="0.94117647058823528" green="0.96862745098039216" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="wAF-WC-qcL"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Cancel">
-                                        <color key="titleColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="0.50395798839999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="normalTitleColor">
-                                            <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
-                                            <color key="value" red="0.94117647058823528" green="0.96862745098039216" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="btnCancelAction:" destination="tPM-Fu-xPG" eventType="touchUpInside" id="lSX-92-VFc"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MV6-ow-cdT">
+                                    <rect key="frame" x="30" y="232.33333333333337" width="233" height="106"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-qE-wwe" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="233" height="45"/>
+                                            <color key="backgroundColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="sn4-z0-a3G"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="L O G O U T">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="normalTitleColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnLogoutAction:" destination="tPM-Fu-xPG" eventType="touchUpInside" id="Zal-QE-hRm"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXl-ge-rl0" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="60.999999999999943" width="233" height="45"/>
+                                            <color key="backgroundColor" red="0.94117647058823528" green="0.96862745098039216" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="wAF-WC-qcL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Cancel">
+                                                <color key="titleColor" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="0.50395798839999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="normalTitleColor">
+                                                    <color key="value" red="0.0" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="normalBackgroundColor">
+                                                    <color key="value" red="0.94117647058823528" green="0.96862745098039216" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="btnCancelAction:" destination="tPM-Fu-xPG" eventType="touchUpInside" id="lSX-92-VFc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" red="0.94117647059999998" green="0.96862745100000003" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="XXl-ge-rl0" secondAttribute="bottom" constant="20" id="4KX-Rw-Td1"/>
-                                <constraint firstItem="XXl-ge-rl0" firstAttribute="leading" secondItem="JdY-qE-wwe" secondAttribute="leading" id="78V-pP-I3k"/>
                                 <constraint firstItem="35s-hg-pKW" firstAttribute="trailing" secondItem="cjC-Zs-tt6" secondAttribute="trailing" id="CoA-F9-tfJ"/>
                                 <constraint firstItem="cjC-Zs-tt6" firstAttribute="leading" secondItem="KAe-04-wnz" secondAttribute="leading" constant="30" id="FKj-4V-qEg"/>
-                                <constraint firstItem="JdY-qE-wwe" firstAttribute="trailing" secondItem="35s-hg-pKW" secondAttribute="trailing" constant="-25" id="MqM-bz-sLY"/>
+                                <constraint firstAttribute="bottom" secondItem="MV6-ow-cdT" secondAttribute="bottom" constant="21" id="GQV-ic-TxT"/>
+                                <constraint firstItem="MV6-ow-cdT" firstAttribute="leading" secondItem="35s-hg-pKW" secondAttribute="leading" id="Oth-wi-h8Z"/>
                                 <constraint firstItem="35s-hg-pKW" firstAttribute="top" secondItem="cjC-Zs-tt6" secondAttribute="bottom" constant="12" id="QAM-jw-KLq"/>
-                                <constraint firstItem="XXl-ge-rl0" firstAttribute="trailing" secondItem="JdY-qE-wwe" secondAttribute="trailing" id="Twc-7b-7yl"/>
-                                <constraint firstItem="XXl-ge-rl0" firstAttribute="top" secondItem="JdY-qE-wwe" secondAttribute="bottom" constant="17" id="UKv-90-fle"/>
-                                <constraint firstItem="JdY-qE-wwe" firstAttribute="leading" secondItem="35s-hg-pKW" secondAttribute="leading" constant="25" id="ZCL-WC-Z5e"/>
+                                <constraint firstItem="MV6-ow-cdT" firstAttribute="top" secondItem="35s-hg-pKW" secondAttribute="bottom" constant="15" id="RZf-6j-MKG"/>
+                                <constraint firstItem="MV6-ow-cdT" firstAttribute="trailing" secondItem="35s-hg-pKW" secondAttribute="trailing" id="V0L-Z4-2Co"/>
                                 <constraint firstAttribute="trailing" secondItem="cjC-Zs-tt6" secondAttribute="trailing" constant="30" id="bVf-gj-dhP"/>
-                                <constraint firstItem="JdY-qE-wwe" firstAttribute="top" secondItem="35s-hg-pKW" secondAttribute="bottom" constant="15" id="ipm-Qs-7LN"/>
                                 <constraint firstItem="cjC-Zs-tt6" firstAttribute="top" secondItem="KAe-04-wnz" secondAttribute="top" constant="10" id="r5M-6I-TUt"/>
                                 <constraint firstAttribute="width" constant="293" id="spT-ww-U9B"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="tAX-5g-rG6"/>
@@ -153,6 +155,8 @@ You can change that setting from the login screen.</string>
                 <constraint firstItem="THu-fc-A5B" firstAttribute="centerX" secondItem="tPM-Fu-xPG" secondAttribute="centerX" id="V7I-Lf-b53"/>
             </constraints>
             <connections>
+                <outlet property="btnCancel" destination="XXl-ge-rl0" id="Xto-i4-2ew"/>
+                <outlet property="btnLogout" destination="JdY-qE-wwe" id="Tse-pC-iKo"/>
                 <outlet property="lblHeading" destination="cjC-Zs-tt6" id="tan-75-Tv7"/>
                 <outlet property="lblSubHeading" destination="35s-hg-pKW" id="IGe-ts-3uV"/>
             </connections>
