@@ -14,10 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="THu-fc-A5B">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="THu-fc-A5B" userLabel="mainStackView">
                     <rect key="frame" x="50" y="246.33333333333334" width="293" height="359.33333333333326"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAe-04-wnz" customClass="DesignableView" customModule="LoginMVVM" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAe-04-wnz" userLabel="mainView" customClass="DesignableView" customModule="LoginMVVM" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="293" height="359.33333333333331"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you to logout?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-Zs-tt6">
@@ -34,7 +34,7 @@ You can change that setting from the login screen.</string>
                                     <color key="textColor" white="0.0" alpha="0.4993791390728477" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MV6-ow-cdT">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MV6-ow-cdT" userLabel="btnStackView">
                                     <rect key="frame" x="30" y="232.33333333333337" width="233" height="106"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-qE-wwe" customClass="DesignableButton" customModule="LoginMVVM" customModuleProvider="target">
