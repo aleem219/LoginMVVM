@@ -34,7 +34,6 @@ class UserDetailsVC: UIViewController {
      heading: "Are you sure you want to login?",
      subHeading: "You saved your credentials, so logging back in will be easy.\nYou can change that setting from the login screen.",
      showCancel: false,
-     showLogout: false,
      onLogout: {
          print("Logout from LoginVC")
      },
@@ -42,5 +41,4 @@ class UserDetailsVC: UIViewController {
          print("Cancel from LoginVC")
      }
  )
- 
  */
