@@ -34,6 +34,21 @@ final class NavigationBar: UIView {
         }
     }
     
+    var leftButtonTitle: String? {
+        set {
+            leftButton.setTitle(newValue, for: .normal)
+        }
+        get {
+            return leftButton.title(for: .normal)
+        }
+    }
+    
+    var isLeftButtonTextHidden: Bool = false {
+        didSet {
+            leftButton.setTitle(isLeftButtonTextHidden ? nil : leftButtonTitle, for: .normal)
+        }
+    }
+    
     var isRightButtonHidden: Bool {
         set {
             rightFirstButton.isHidden = newValue

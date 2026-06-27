@@ -69,6 +69,7 @@ extension UserVC: UserViewModelProtocol {
     func didFetchUsers(_ indexPaths: [IndexPath]) {
         UIView.performWithoutAnimation {
             tableView.insertRows(at: indexPaths, with: .none)
+            navBar.leftButtonTitle = "Back" 
         }
     }
     
